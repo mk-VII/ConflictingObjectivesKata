@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata08Tests", "Kata08Tests\Kata08Tests.csproj", "{55DAAD2F-3B2C-4750-9127-C13DB7B8D257}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata08", "Kata08\Kata08.csproj", "{419BE5EF-A5B0-482F-814E-73C3EAFE2663}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55DAAD2F-3B2C-4750-9127-C13DB7B8D257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55DAAD2F-3B2C-4750-9127-C13DB7B8D257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55DAAD2F-3B2C-4750-9127-C13DB7B8D257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55DAAD2F-3B2C-4750-9127-C13DB7B8D257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{419BE5EF-A5B0-482F-814E-73C3EAFE2663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{419BE5EF-A5B0-482F-814E-73C3EAFE2663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{419BE5EF-A5B0-482F-814E-73C3EAFE2663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{419BE5EF-A5B0-482F-814E-73C3EAFE2663}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
