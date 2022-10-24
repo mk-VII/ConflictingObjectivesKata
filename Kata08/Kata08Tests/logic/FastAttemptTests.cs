@@ -4,10 +4,10 @@ using Moq;
 namespace Kata08.logic;
 
 [TestClass]
-public class ReadableAttemptTests
+public class FastAttemptTests
 {
     private Mock<IWordListRepository>? _repoMock;
-    private ReadableAttempt? _attempt;
+    private FastAttempt? _attempt;
     
     [TestMethod]
     public async Task TestGetWordsWithSubWords()
@@ -16,7 +16,7 @@ public class ReadableAttemptTests
         _repoMock.Setup(x => x.GetWordList())
             .ReturnsAsync(new[] { "con", "convex", "vex" });
 
-        _attempt = new ReadableAttempt(_repoMock.Object);
+        _attempt = new FastAttempt(_repoMock.Object);
 
         var wordsWithSubWords = (await _attempt.GetWordsWithSubWords()).ToArray();
         
@@ -30,7 +30,7 @@ public class ReadableAttemptTests
         _repoMock.Setup(x => x.GetWordList())
             .ReturnsAsync(new[] { "be", "because", "cause" });
 
-        _attempt = new ReadableAttempt(_repoMock.Object);
+        _attempt = new FastAttempt(_repoMock.Object);
 
         var wordsWithSubWords = (await _attempt.GetWordsWithSubWords()).ToArray();
         
@@ -44,7 +44,7 @@ public class ReadableAttemptTests
         _repoMock.Setup(x => x.GetWordList())
             .ReturnsAsync(new[] { "con", "convex", "vex", "zebra" });
 
-        _attempt = new ReadableAttempt(_repoMock.Object);
+        _attempt = new FastAttempt(_repoMock.Object);
 
         var wordsWithSubWords = (await _attempt.GetWordsWithSubWords()).ToArray();
         
@@ -58,7 +58,7 @@ public class ReadableAttemptTests
         _repoMock.Setup(x => x.GetWordList())
             .ReturnsAsync(new[] { "be", "because", "clause" });
 
-        _attempt = new ReadableAttempt(_repoMock.Object);
+        _attempt = new FastAttempt(_repoMock.Object);
 
         var wordsWithSubWords = (await _attempt.GetWordsWithSubWords()).ToArray();
         

@@ -16,7 +16,7 @@ public class ReadableAttempt : IAttempt
         MaxWordLength = max;
     }
 
-    public async Task<IEnumerable<WordWithSubWords>> GetWordsWithSubWords()
+    public async Task<IEnumerable<Word>> GetWordsWithSubWords()
     {
         var wordList = WordListStandardiser
             .Standardise(await _repository.GetWordList())
@@ -29,7 +29,7 @@ public class ReadableAttempt : IAttempt
             .Where(word => word.Length < MaxWordLength)
             .ToArray();
 
-        var wordsWithSubWords = new List<WordWithSubWords>();
+        var resultWords = new List<Word>();
 
         foreach (var wholeWord in possibleWords)
         {
@@ -41,11 +41,12 @@ public class ReadableAttempt : IAttempt
 
                 if (possibleSubWords.Contains(neededSuffix))
                 {
-                    wordsWithSubWords.Add(new WordWithSubWords(wholeWord, prefix, neededSuffix));
+                    resultWords.Add(new Word(new[] { prefix, neededSuffix }));
                 }
             }
         }
 
-        return wordsWithSubWords;
+
+        return resultWords;
     }
 }

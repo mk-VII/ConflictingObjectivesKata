@@ -6,5 +6,5 @@ public interface IAttempt
 {
     int MaxWordLength { get; init; }
 
-    Task<IEnumerable<WordWithSubWords>> GetWordsWithSubWords();
+    Task<IEnumerable<Word>> GetWordsWithSubWords();
 }
